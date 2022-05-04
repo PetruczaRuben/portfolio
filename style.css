@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap");
+
+:root {
+  --blue: #70d7ff;
+  --yellow: #ffd426;
+  --graystrong: #1c1c1e;
+  --graymid: #3a3a3c;
+  --graylight: #545458;
+  --grayverylight: #767680;
+}
+* {
+  box-sizing: border-box;
+  margin: 0rem;
+  padding: 0rem;
+  font-family: "Montserrat", sans-serif;
+}
+body {
+  background-color: var(--graystrong);
+  color: white;
+  width: 80vw;
+  margin: auto;
+  text-size-adjust: auto;
+}
+.bluetext {
+  color: var(--blue);
+}
+.yellowtext {
+  color: var(--yellow);
+  font-size: 3vw;
+  line-height: 1rem;
+}
+.whitetext {
+  color: white;
+}
+body a {
+  color: white;
+  text-decoration: none;
+}
+/* /////////////HEADER/////////// */
+header {
+  position: relative;
+  height: 100vh;
+}
+body nav {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+body nav ul {
+  display: flex;
+  gap: 1rem;
+  list-style-type: none;
+  font-size: 1.8vw;
+}
+body nav ul li {
+  display: relative;
+  padding: 1rem 1rem;
+}
+nav a {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+}
+nav a::after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0.2rem;
+  content: "";
+  display: block;
+  height: 1.3rem;
+  left: 50%;
+  position: absolute;
+  background: #76768081;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+  z-index: -1;
+}
+nav a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+header nav .pre-nav-number {
+  font-size: 1.1vw;
+  font-weight: normal;
+}
+header nav p {
+  font-size: 2.8vw;
+  font-weight: bold;
+}
+.hero {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 15vh;
+}
+.scrolldown {
+  position: absolute;
+  bottom: 15rem;
+  right: -5rem;
+  font-size: 1.4vw;
+  transform: rotate(90deg);
+}
+.hero .icons {
+  gap: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.heromain {
+  font-size: 3.3vw;
+  transform: translateX(4rem);
+  white-space: nowrap;
+}
+.cta {
+  background-color: var(--graymid);
+  color: white;
+  border: none;
+  border-radius: 2rem;
+  padding: 1rem 2rem;
+  font-size: 1.9vw;
+  margin-top: 4rem;
+  font-weight: bold;
+}
+.ruben-portrait {
+  transform: scale(1.2) translateX(-2rem);
+  z-index: -2;
+}
+.line {
+  height: 2px;
+  width: 99vw;
+  background-color: var(--grayverylight);
+  transform: translateX(-9vw);
+}
+.line-1 {
+  bottom: 0px;
+  position: absolute;
+}
+/* /////////////PROJECTS/////////// */
+
+footer {
+  display: flex;
+}
+.icon {
+  width: 3rem;
+  height: 3rem;
+}
+.project img {
+  width: 700px;
+  height: auto;
+}
