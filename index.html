@@ -15,12 +15,14 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     />
     <link rel="stylesheet" href="style.css" />
+    <script defer src="particles.js"></script>
     <script defer src="script.js"></script>
     <title>Ruben Petrucza</title>
   </head>
   <body>
     <!-- HERO SECTION -->
     <header>
+      <div id="particles-js"></div>
       <nav>
         <p class="bluetext">
           <span class="whitetext pre-nav-number"
@@ -68,7 +70,8 @@
         <section class="heromain">
           <h1 class="herotext">
             Hi 👋 <br />
-            I am <span class="bluetext">Ruben Petrucza</span>, a <br />
+            I am <span class="bluetext rubenname">Ruben Petrucza</span>, a
+            <br />
             Front-End Developer <span class="yellowtext">.</span>
           </h1>
           <a
@@ -77,11 +80,17 @@
             ><button class="cta">Resume</button></a
           >
         </section>
-        <img class="ruben-portrait" src="img/ruben.png" alt="ruben-portrait" />
+        <img
+          class="ruben-portrait"
+          width="365"
+          height="520"
+          src="img/ruben.png"
+          alt="ruben-portrait"
+        />
       </section>
       <p class="scrolldown">Scroll Down ☛</p>
-      <div class="line line-1"></div>
     </header>
+    <div class="line line-1"></div>
     <main>
       <!-- 02. PROJECTS -->
       <div class="upBtn">&uarr;</div>
@@ -234,7 +243,7 @@
         <div class="line line-3"></div>
       </section>
       <!-- 04. BLOG -->
-      <!-- <section class="blog">
+      <section class="blog">
         <h2>
           <span class="page-num">04<span class="yellowtext">.</span></span
           >Blog
@@ -243,8 +252,9 @@
           When I’m not coding, I like to write about code, here are some of my
           articles:
         </h4>
+        <section class="blog-slider"></section>
         <div class="line line-4"></div>
-      </section> -->
+      </section>
       <!-- 05. CONTACT -->
       <section class="contact">
         <h2>
@@ -252,16 +262,98 @@
           >Let's connect
           <span class="bluetext">!</span>
         </h2>
-        <div class="line line-5"></div>
+        <h5>
+          Send me an email to petrucza.ruben@gmail.com, or use the contact form
+          below!
+        </h5>
+        <form
+          target="_blank"
+          action="https://formsubmit.co/7dee30cc12bad4f133c1f44866719400"
+          method="POST"
+        >
+          <section class="form-inputs">
+            <div class="form-group">
+              <div class="form-row">
+                <div class="col">
+                  <input
+                    type="text"
+                    name="name"
+                    class="form-control contact-name"
+                    placeholder="Name"
+                    required
+                  />
+                </div>
+                <div class="col">
+                  <input
+                    type="email"
+                    name="email"
+                    class="form-control contact-email"
+                    placeholder="Email"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <textarea
+                placeholder="Your Message..."
+                class="form-control contact-message"
+                name="message"
+                rows="10"
+                required
+              ></textarea>
+            </div>
+          </section>
+          <button type="submit" class="cta">Send</button>
+        </form>
       </section>
     </main>
 
     <!-- FOOTER -->
+
     <footer>
-      <p>© <span class="bluetext"> Ruben Petrucza</span> 2022</p>
-      <img class="icon" src="img/icons/hashnode.svg" alt="hashnode-logo" />
-      <img class="icon" src="img/icons/github.svg" alt="github-logo" />
-      <img class="icon" src="img/icons/linkedin.svg" alt="linkedin-logo" />
+      <div class="wavescontainer">
+        <svg
+          class="waves"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          viewBox="0 24 150 28"
+          preserveAspectRatio="none"
+          shape-rendering="auto"
+        >
+          <defs>
+            <path
+              id="gentle-wave"
+              d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+            />
+          </defs>
+          <g class="parallax">
+            <use xlink:href="#gentle-wave" x="48" y="0" fill="#767680" />
+            <use
+              xlink:href="#gentle-wave"
+              x="48"
+              y="3"
+              fill="rgba(255,255,255,0.5)"
+            />
+            <use
+              xlink:href="#gentle-wave"
+              x="48"
+              y="5"
+              fill="rgba(255,255,255,0.3)"
+            />
+          </g>
+        </svg>
+      </div>
+      <section class="footerlinks">
+        <p>© <span class="bluetext"> Ruben Petrucza</span> 2022</p>
+        <img class="icon" src="img/icons/hashnode.svg" alt="hashnode-logo" />
+        <img
+          class="icon footer-github"
+          src="img/icons/github.svg"
+          alt="github-logo"
+        />
+        <img class="icon" src="img/icons/linkedin.svg" alt="linkedin-logo" />
+      </section>
     </footer>
   </body>
 </html>

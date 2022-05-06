@@ -42,7 +42,9 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--graymid);
 }
-
+button {
+  cursor: pointer;
+}
 .bluetext {
   color: var(--blue);
 }
@@ -58,11 +60,19 @@ body a {
   color: white;
   text-decoration: none;
 }
+/*PARTICLES.JS*/
+#particles-js {
+  position: absolute;
+  z-index: -10;
+  width: 99vw;
+  transform: translateX(-10vw);
+}
 /* /////////////HEADER/////////// */
 header {
   position: relative;
   height: 100vh;
   text-shadow: var(--dropshadow);
+  overflow: hidden;
 }
 body nav {
   padding-top: 5vh;
@@ -87,6 +97,11 @@ nav a {
   display: inline-block;
   position: relative;
 }
+/* .rubenname:hover {
+  color: #ffd426;
+  transition: all 1s ease-in-out 0s; 
+} 
+*/
 nav a::after {
   background: none repeat scroll 0 0 transparent;
   bottom: 0px;
@@ -299,16 +314,109 @@ h2 .page-num {
   font-size: 2vw;
   text-align: center;
 }
+/* /////////////BLOG/////////// */
+.blog {
+  text-align: center;
+}
+/* /////////////CONTACT/////////// */
+.contact button {
+  font-size: 1.5vw;
+  text-align: center;
+  transform: translateX(36vw);
+  margin: auto;
+  margin-top: 2vh;
+}
+.contact h5 {
+  text-align: center;
+  font-size: 1vw;
+}
+.contact {
+  height: fit-content;
+}
+.form-inputs {
+  display: flex;
+  justify-content: center;
+  gap: 2vw;
+  margin-top: 5vh;
+}
+form input,
+textarea {
+  border: 0.1vw solid white;
+  color: white;
+  font-size: 0.8vw;
+  border-radius: 0.3vw;
+  box-shadow: var(--dropshadow);
+  background-color: transparent;
+  padding-left: 1vw;
+}
+form .contact-name {
+  width: 15vw;
+  height: 4vh;
+  margin-bottom: 2vh;
+}
+form .contact-email {
+  height: 4vh;
+  width: 15vw;
+}
+form .contact-message {
+  width: 30vw;
+  height: 15vh;
+  padding-top: 1vh;
+}
 /* /////////////Footer/////////// */
-footer {
+.footerlinks {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1vw;
-  margin: 1vh;
+  margin: 0px;
+  background-color: transparent;
+  width: 99vw;
+  transform: translate(-10vw, 1vh);
+  font-size: 1.5vw;
 }
 .icon {
   max-width: 2rem;
   width: 3vw;
   height: auto;
+  cursor: pointer;
+}
+.footer-github {
+  background-color: var(--graystrong);
+  border-radius: 25%;
+}
+/* WAVES */
+.wavescontainer {
+  transform: translate(-10vw, 7vh);
+}
+.wavescontainer svg {
+  width: 99vw;
+  height: 6vw;
+}
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 3.5s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 5s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 6.2s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 10s;
+}
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
 }
