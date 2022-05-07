@@ -22,37 +22,44 @@
   <body>
     <!-- HERO SECTION -->
     <header>
+      <div class="burgermenu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
       <div id="particles-js"></div>
-      <nav>
-        <p class="bluetext">
-          <span class="whitetext pre-nav-number"
-            >01<span class="yellowtext">.</span></span
-          >Ruben
-        </p>
+      <nav id="section-1">
+        <a href=".hero" class="nav-link ruben-01">
+          <p class="bluetext">
+            <span class="whitetext pre-nav-number"
+              >01<span class="yellowtext">.</span></span
+            >Ruben
+          </p>
+        </a>
         <ul>
           <li>
-            <a href="">
+            <a class="nav-link" href="#section-2">
               <span class="pre-nav-number"
                 >02<span class="yellowtext">.</span></span
               >Projects
             </a>
           </li>
           <li>
-            <a href="">
+            <a class="nav-link" href="#section-3">
               <span class="pre-nav-number"
                 >03<span class="yellowtext">.</span></span
               >Skills
             </a>
           </li>
           <li>
-            <a href="">
+            <a class="nav-link" href="#section-4">
               <span class="pre-nav-number"
                 >04<span class="yellowtext">.</span></span
               >Blog
             </a>
           </li>
           <li>
-            <a href="">
+            <a class="nav-link" href="#section-5">
               <span class="pre-nav-number"
                 >05<span class="yellowtext">.</span></span
               >Contact
@@ -63,9 +70,26 @@
 
       <section class="hero">
         <div class="icons">
-          <img class="icon" src="img/icons/hashnode.svg" alt="hashnode-logo" />
-          <img class="icon" src="img/icons/github.svg" alt="github-logo" />
-          <img class="icon" src="img/icons/linkedin.svg" alt="linkedin-logo" />
+          <a target="_blank" href="https://rubenpetru.hashnode.dev/">
+            <img
+              class="icon"
+              src="img/icons/hashnode.svg"
+              alt="hashnode-logo"
+            />
+          </a>
+          <a target="_blank" href="https://github.com/PetruczaRuben">
+            <img class="icon" src="img/icons/github.svg" alt="github-logo" />
+          </a>
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/in/ruben-petrucza-98a880196/"
+          >
+            <img
+              class="icon"
+              src="img/icons/linkedin.svg"
+              alt="linkedin-logo"
+            />
+          </a>
         </div>
         <section class="heromain">
           <h1 class="herotext">
@@ -90,7 +114,7 @@
       </section>
       <p class="scrolldown">Scroll Down ☛</p>
     </header>
-    <div class="line line-1"></div>
+    <div class="line line-1" id="section-2"></div>
     <main>
       <!-- 02. PROJECTS -->
       <div class="upBtn">&uarr;</div>
@@ -164,7 +188,7 @@
             </section>
           </section>
         </section>
-        <div class="line line-2"></div>
+        <div class="line line-2" id="section-3"></div>
       </section>
       <!-- 03. SKILLS -->
       <section class="skills">
@@ -240,10 +264,10 @@
           </section>
         </section>
 
-        <div class="line line-3"></div>
+        <div class="line line-3" id="section-4"></div>
       </section>
       <!-- 04. BLOG -->
-      <section class="blog">
+      <section class="blogs">
         <h2>
           <span class="page-num">04<span class="yellowtext">.</span></span
           >Blog
@@ -252,8 +276,74 @@
           When I’m not coding, I like to write about code, here are some of my
           articles:
         </h4>
-        <section class="blog-slider"></section>
-        <div class="line line-4"></div>
+        <section class="blog-slider">
+          <section class="blog-container">
+            <section class="blog">
+              <img src="img/hashy.png" alt="" />
+              <h5>3 beginner friendly API projects</h5>
+              <p>
+                I couldnt live without the following methods, they are not in a
+                particular order. <br />1. map() This has to be my most used
+                one, I use it every day
+              </p>
+              <a href="#" class="readmore">Read More</a>
+            </section>
+            <section class="blog">
+              <img src="img/hashy-2.png" alt="" />
+              <h5>Top 10 intresting APIs to work with</h5>
+              <p>
+                I couldnt live without the following methods, they are not in a
+                particular order. <br />1. map() This has to be my most used
+                one, I use it every day
+              </p>
+              <a href="#" class="readmore">Read More</a>
+            </section>
+            <section class="blog">
+              <img src="img/hashy-3.png" alt="" />
+              <h5>My favourite array methods</h5>
+              <p>
+                I couldnt live without the following methods, they are not in a
+                particular order. <br />1. map() This has to be my most used
+                one, I use it every day
+              </p>
+              <a href="#" class="readmore">Read More</a>
+            </section>
+            <section class="blog">
+              <img src="img/hashy.png" alt="" />
+              <h5>3 beginner friendly API projects</h5>
+              <p>
+                I couldnt live without the following methods, they are not in a
+                particular order. <br />1. map() This has to be my most used
+                one, I use it every day
+              </p>
+              <a href="#" class="readmore">Read More</a>
+            </section>
+            <section class="blog">
+              <img src="img/hashy-2.png" alt="" />
+              <h5>Top 10 intresting APIs to work with</h5>
+              <p>
+                I couldnt live without the following methods, they are not in a
+                particular order. <br />1. map() This has to be my most used
+                one, I use it every day
+              </p>
+              <a href="#" class="readmore">Read More</a>
+            </section>
+            <section class="blog">
+              <img src="img/hashy-3.png" alt="" />
+              <h5>My favourite array methods</h5>
+              <p>
+                I couldnt live without the following methods, they are not in a
+                particular order. <br />1. map() This has to be my most used
+                one, I use it every day
+              </p>
+              <a href="#" class="readmore">Read More</a>
+            </section>
+          </section>
+          <!-- <button class="slider__btn slider__btn--left">&larr;</button>
+          <button class="slider__btn slider__btn--right">&rarr;</button> -->
+        </section>
+        <!-- <section class="slider-counter"></section> -->
+        <div class="line line-4" id="section-5"></div>
       </section>
       <!-- 05. CONTACT -->
       <section class="contact">
@@ -346,13 +436,18 @@
       </div>
       <section class="footerlinks">
         <p>© <span class="bluetext"> Ruben Petrucza</span> 2022</p>
-        <img class="icon" src="img/icons/hashnode.svg" alt="hashnode-logo" />
-        <img
-          class="icon footer-github"
-          src="img/icons/github.svg"
-          alt="github-logo"
-        />
-        <img class="icon" src="img/icons/linkedin.svg" alt="linkedin-logo" />
+        <a target="_blank" href="https://rubenpetru.hashnode.dev/">
+          <img class="icon" src="img/icons/hashnode.svg" alt="hashnode-logo" />
+        </a>
+        <a target="_blank" href="https://github.com/PetruczaRuben">
+          <img class="icon" src="img/icons/github.svg" alt="github-logo" />
+        </a>
+        <a
+          target="_blank"
+          href="https://www.linkedin.com/in/ruben-petrucza-98a880196/"
+        >
+          <img class="icon" src="img/icons/linkedin.svg" alt="linkedin-logo" />
+        </a>
       </section>
     </footer>
   </body>
