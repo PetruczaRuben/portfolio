@@ -296,6 +296,12 @@ h2 .page-num {
   font-weight: bold;
   color: white;
 }
+.projectBtn i {
+  font-size: 2vw;
+  margin-right: 0.3vw;
+  color: #ffffff;
+}
+
 .projectBtn {
   margin-top: 3vh;
   display: flex;
@@ -601,6 +607,9 @@ form .contact-message {
   .burgermenu {
     display: flex;
   }
+  .burgermenu.active .bar {
+    box-shadow: none;
+  }
   .burgermenu.active .bar:nth-child(2) {
     opacity: 0;
   }
@@ -630,8 +639,9 @@ form .contact-message {
     flex-direction: row;
     /* transform: translate(33vw, 15vh); */
     position: absolute;
-    bottom: 10%;
-    left: 8%;
+    bottom: 8%;
+    gap: 6vw;
+    left: 0%;
     /* display: block; */
   }
   .projects .project {
@@ -644,6 +654,7 @@ form .contact-message {
     width: fit-content;
     margin-bottom: 7vw;
   }
+
   .projects .project button {
     background-color: var(--graylight);
     padding: 2vw 4vw;
@@ -690,7 +701,7 @@ form .contact-message {
   textarea {
     border: 0.1vw solid white;
     color: white;
-    font-size: 0.8vw;
+    font-size: 2vw;
     border-radius: 0.3vw;
     box-shadow: var(--dropshadow);
     background-color: transparent;
@@ -709,5 +720,68 @@ form .contact-message {
     width: 50vw;
     height: 15vh;
     padding-top: 1vh;
+  }
+  /* SIZING FIXES */
+  .hero .heromain h1 {
+    font-size: 5vw;
+  }
+  .hero .heromain button {
+    font-size: 3.5vw;
+    padding: 2.5vw 4vw;
+  }
+  body h2 {
+    font-size: 6vw;
+  }
+  .projects .project h3 {
+    text-shadow: none;
+    font-size: 3.5vw;
+  }
+  .projects .project .project-disc {
+    font-size: 2.5vw;
+  }
+  .projects .project .builtwith {
+    font-size: 2vw;
+  }
+  .projects .project button {
+    font-size: 3vw;
+  }
+  .skills h3 {
+    font-size: 3.2vw;
+  }
+  html body .skills ul li {
+    margin: auto 1.5vw;
+  }
+  .skills ul li label {
+    font-size: 2vw;
+  }
+  .skills ul {
+    margin-bottom: 5vh;
+  }
+  .blogs h4 {
+    font-size: 3.2vw;
+  }
+  body .blog-container .blog h5 {
+    font-size: 2vw;
+  }
+  body .blog-container .blog p {
+    font-size: 1.4vw;
+  }
+  body .blog-container .blog .readmore {
+    font-size: 1.8vw;
+  }
+  body .contact h5 {
+    font-size: 2.6vw;
+  }
+  body .contact button {
+    font-size: 3vw;
+    padding: 2.5vw 5vw;
+    transform: translateX(32vw);
+  }
+  footer .footerlinks p {
+    font-size: 2.2vw;
+  }
+  .projectBtn i {
+    font-size: 3.5vw;
+    margin-right: 1vw;
   }
 }

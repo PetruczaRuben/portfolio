@@ -42,10 +42,11 @@ window.addEventListener("resize", function () {
 
     navObs.observe(header);
   }
-
-  let headerHeight = document.querySelector("header").clientHeight;
+  headerHeight = document.querySelector("header").clientHeight;
   document.getElementById("particles-js").style.height = `${headerHeight}px`;
 });
+let headerHeight = document.querySelector("header").clientHeight;
+document.getElementById("particles-js").style.height = `${headerHeight}px`;
 
 //selecting elements
 // const activeBlog = document.querySelector(".blog-active");
