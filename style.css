@@ -573,6 +573,17 @@ form .contact-message {
   color: white;
   z-index: 12;
 }
+
+/* ANIMATIONS */
+@keyframes scrollDown {
+  50% {
+    transform: rotate(90deg) translatex(3vw);
+  }
+}
+
+body .scrolldown {
+  animation: scrollDown 3s ease-in-out 0s infinite;
+}
 /* MOBILE RESPONSIVENESS */
 @media screen and (max-width: 700px) {
   .ruben-01 {

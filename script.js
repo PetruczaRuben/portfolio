@@ -1,5 +1,12 @@
+"use strict";
 ////Load header background particles
-particlesJS.load("particles-js", "particlesjs-config.json");
+if (window.innerWidth <= 700) {
+  particlesJS.load("particles-js", "particlesjs-mobile-config.json");
+}
+if (window.innerWidth > 700) {
+  particlesJS.load("particles-js", "particlesjs-config.json");
+}
+
 //burgermenu
 const burgermenu = document.querySelector(".burgermenu");
 burgermenu.addEventListener("click", function () {
@@ -23,24 +30,30 @@ const nav = document.querySelector("nav");
 const line1 = document.querySelector(".line-1");
 const header = document.querySelector("header");
 
+// onload below 700px header unobserve
+if (window.innerWidth <= 700) {
+  nav.classList.remove("sticky");
+}
 window.addEventListener("resize", function () {
-  if (window.matchMedia("(min-width: 700px)").matches) {
-    const stickyNav = function (entries) {
-      const [entry] = entries;
-      if (!entry.isIntersecting) {
-        nav.classList.add("sticky");
-      } else {
-        nav.classList.remove("sticky");
-      }
-    };
+  const stickyNav = function (entries) {
+    const [entry] = entries;
+    if (!entry.isIntersecting) {
+      nav.classList.add("sticky");
+    } else {
+      nav.classList.remove("sticky");
+    }
+  };
+  const navObs = new IntersectionObserver(stickyNav, {
+    root: null,
+    threshold: 0,
+    rootMargin: `-${nav.getBoundingClientRect().height}px`,
+  });
 
-    const navObs = new IntersectionObserver(stickyNav, {
-      root: null,
-      threshold: 0,
-      rootMargin: `-${nav.getBoundingClientRect().height}px`,
-    });
-
+  // if (window.matchMedia("(min-width: 700px)").matches) {
+  if (window.innerWidth <= 700) {
     navObs.observe(header);
+  } else {
+    navObs.unobserve(header);
   }
   headerHeight = document.querySelector("header").clientHeight;
   document.getElementById("particles-js").style.height = `${headerHeight}px`;
