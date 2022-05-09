@@ -29,7 +29,7 @@ document.querySelector("nav").addEventListener("click", function (e) {
 const nav = document.querySelector("nav");
 const line1 = document.querySelector(".line-1");
 const header = document.querySelector("header");
-
+//TODO need to delete unused code
 // onload below 700px header unobserve
 if (window.innerWidth <= 700) {
   nav.classList.remove("sticky");
