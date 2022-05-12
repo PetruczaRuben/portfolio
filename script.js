@@ -3,7 +3,7 @@
 if (window.innerWidth <= 700) {
   particlesJS.load("particles-js", "particlesjs-mobile-config.json");
 }
-if (window.innerWidth > 700) {
+if (window.innerWidth > 701) {
   particlesJS.load("particles-js", "particlesjs-config.json");
 }
 
@@ -16,8 +16,9 @@ burgermenu.addEventListener("click", function () {
 });
 //upbtn
 document.querySelector(".upBtn").addEventListener("click", function () {
-  document.querySelector(".hero").scrollIntoView({ behavior: "smooth" });
+  document.querySelector("body").scrollIntoView({ behavior: "smooth" });
 });
+//smooth scrolling to sections
 document.querySelector("nav").addEventListener("click", function (e) {
   e.preventDefault();
   if (e.target.closest("a")?.classList.contains("nav-link")) {
@@ -29,30 +30,29 @@ document.querySelector("nav").addEventListener("click", function (e) {
 const nav = document.querySelector("nav");
 const line1 = document.querySelector(".line-1");
 const header = document.querySelector("header");
-//TODO need to delete unused code
-// onload below 700px header unobserve
-if (window.innerWidth <= 700) {
-  nav.classList.remove("sticky");
-}
-window.addEventListener("resize", function () {
-  const stickyNav = function (entries) {
-    const [entry] = entries;
-    if (!entry.isIntersecting) {
-      nav.classList.add("sticky");
-    } else {
-      nav.classList.remove("sticky");
-    }
-  };
-  const navObs = new IntersectionObserver(stickyNav, {
-    root: null,
-    threshold: 0,
-    rootMargin: `-${nav.getBoundingClientRect().height}px`,
-  });
 
-  // if (window.matchMedia("(min-width: 700px)").matches) {
-  if (window.innerWidth <= 700) {
-    navObs.observe(header);
+const stickyNav = function (entries) {
+  const [entry] = entries;
+  if (!entry.isIntersecting && window.innerWidth > 700) {
+    nav.classList.add("sticky");
   } else {
+    nav.classList.remove("sticky");
+  }
+};
+const navObs = new IntersectionObserver(stickyNav, {
+  root: null,
+  threshold: 0,
+  rootMargin: `-${nav.getBoundingClientRect().height}px`,
+});
+
+navObs.observe(header);
+
+// if (window.innerWidth <= 700) {
+//   nav.classList.remove("sticky");
+// }
+window.addEventListener("resize", function () {
+  // if (window.matchMedia("(min-width: 700px)").matches) {
+  if (window.innerWidth >= 700) {
     navObs.unobserve(header);
   }
   headerHeight = document.querySelector("header").clientHeight;
