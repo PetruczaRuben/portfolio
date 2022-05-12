@@ -1,10 +1,12 @@
 "use strict";
 ////Load header background particles
+particlesJS.load("particles-js", "particlesjs-config.json");
 if (window.innerWidth <= 700) {
-  particlesJS.load("particles-js", "particlesjs-mobile-config.json");
+  console.log("MOBILEVIEW");
+  document.getElementById("particles-js").remove();
 }
 if (window.innerWidth > 701) {
-  particlesJS.load("particles-js", "particlesjs-config.json");
+  console.log("DESKTOPVIEW");
 }
 
 //burgermenu
@@ -52,14 +54,26 @@ navObs.observe(header);
 // }
 window.addEventListener("resize", function () {
   // if (window.matchMedia("(min-width: 700px)").matches) {
-  if (window.innerWidth >= 700) {
+  if (window.innerWidth <= 700) {
     navObs.unobserve(header);
+    if (document.getElementById("particles-js")) {
+      document.getElementById("particles-js").remove();
+    }
   }
-  headerHeight = document.querySelector("header").clientHeight;
-  document.getElementById("particles-js").style.height = `${headerHeight}px`;
+  if (window.innerWidth > 700) {
+    navObs.observe(header);
+    if (document.getElementById("particles-js")) {
+      headerHeight = document.querySelector("header").clientHeight;
+      document.getElementById(
+        "particles-js"
+      ).style.height = `${headerHeight}px`;
+    }
+  }
 });
 let headerHeight = document.querySelector("header").clientHeight;
-document.getElementById("particles-js").style.height = `${headerHeight}px`;
+if (document.getElementById("particles-js")) {
+  document.getElementById("particles-js").style.height = `${headerHeight}px`;
+}
 
 //selecting elements
 // const activeBlog = document.querySelector(".blog-active");
