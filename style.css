@@ -282,6 +282,7 @@ h2 .page-num {
   font-size: 1.5vw;
   margin: 3vh auto;
   font-weight: 300;
+  line-height: 2vw;
 }
 .builtwith {
   font-size: 1vw;
