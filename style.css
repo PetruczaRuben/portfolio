@@ -396,6 +396,10 @@ h2 .page-num {
   font-size: 1vw;
   margin: 1vh auto;
 }
+.blogs h4 {
+  font-size: 1.6vw !important;
+  font-weight: normal;
+}
 .blog p {
   margin: auto 1vw;
 }
