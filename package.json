@@ -1,0 +1,11 @@
+{
+  "name": "my-project",
+  "source": "./index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build index.html ./dist"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
+  }
+}
