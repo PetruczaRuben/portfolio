@@ -165,6 +165,7 @@ header nav p {
   transform: translateX(4rem);
   white-space: nowrap;
   z-index: 10;
+  margin-bottom: min(4vh, 5vw);
 }
 
 .cta {
@@ -178,6 +179,7 @@ header nav p {
   font-weight: bold;
 }
 .hero .icons {
+  margin-top: min(0.5vh 1vw);
   gap: 3vh;
   display: flex;
   flex-direction: column;
@@ -789,5 +791,8 @@ body .scrolldown {
   }
   .aboutcontainer img {
     width: 50vw;
+  }
+  .contact .form-group textarea {
+    margin-top: 15vh;
   }
 }
