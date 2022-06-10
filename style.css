@@ -242,7 +242,7 @@ header nav p {
   gap: 3vw;
   text-align: center;
 }
-.project-2 {
+.project-reverse {
   flex-direction: row-reverse;
 }
 body h2 {
