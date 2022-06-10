@@ -217,9 +217,9 @@ header nav p {
   aspect-ratio: 1 / 1;
   background-color: white;
   position: fixed;
-  bottom: 2vw;
+  bottom: max(2vw, 1rem);
   min-width: 2rem;
-  right: 2vw;
+  right: max(2vw, 1rem);
   color: var(--blue);
   font-size: max(2vw, 4vh);
   font-weight: bold;
@@ -246,7 +246,7 @@ header nav p {
   flex-direction: row-reverse;
 }
 body h2 {
-  font-size: 3vw;
+  font-size: 3.3vw;
   text-align: center;
   transform: translateX(-2vw);
   margin: min(7vh, 5vw) auto;
@@ -273,19 +273,20 @@ h2 .page-num {
   border-radius: 1vw;
 }
 .project h3 {
-  font-size: 2.1vw;
+  font-size: 2.3vw;
   font-weight: 400;
   color: var(--blue);
   text-shadow: var(--dropshadow);
 }
 .project .project-disc {
-  font-size: 1.3vw;
+  font-size: 1.4vw;
   margin: 3vh auto;
   font-weight: 300;
   line-height: max(2vw, 1.1rem);
 }
 .builtwith {
-  font-size: 1vw;
+  font-size: 1.2vw;
+  font-style: italic;
   font-weight: 300;
 }
 .projectBtn button {
@@ -348,11 +349,28 @@ h2 .page-num {
   width: 30vw;
 }
 .skills h3 {
-  font-size: 2vw;
+  font-size: 2.2vw;
   text-align: center;
 }
+
+/* /////////////ABOUT/////////// */
+.aboutcontainer p {
+  font-size: 1.4vw;
+  line-height: 2.5vw;
+  width: 40vw;
+}
+.aboutcontainer {
+  margin-bottom: 5vh;
+  display: flex;
+  gap: 5vw;
+  width: 100%;
+  align-items: center;
+}
+.aboutcontainer img {
+  width: 30vw;
+}
 /* /////////////BLOG/////////// */
-.blogs {
+/* .blogs {
   text-align: center;
 }
 .blog-container {
@@ -361,23 +379,9 @@ h2 .page-num {
   align-items: flex-end;
   justify-content: center;
   flex-wrap: wrap;
-  /* display: grid;
-  grid-auto-columns: 1vw * 3;
-  grid-template-areas: "first active third"; */
   gap: 2vw;
 }
-/* .first {
-  grid-area: first;
-}
-.third {
-  grid-area: third;
-}
-.active {
-  grid-area: active;
-}
-.blog-slider {
-  position: relative;
-} */
+
 .blog {
   border-radius: 0.5vw;
   border: 1px solid #70d7ff;
@@ -403,12 +407,6 @@ h2 .page-num {
 .blog p {
   margin: auto 1vw;
 }
-/* .blog-active {
-  width: 22vw;
-}
-.blog-active h5 {
-  font-size: 1.2vw;
-} */
 .blog:hover {
   box-shadow: 0 0 2.5px var(--blue), 0 0 5px var(--blue), 0 0 10px var(--blue);
 
@@ -430,29 +428,6 @@ h2 .page-num {
 }
 .readmore:hover {
   background-color: var(--graymid);
-}
-/* .slider-counter {
-  margin-bottom: 15vh;
-}
-.slider__btn {
-  position: absolute;
-  top: 50%;
-  z-index: 10;
-  border: none;
-  background: transparent;
-  color: rgb(255, 255, 255);
-  font-size: 3vw;
-  cursor: pointer;
-}
-
-.slider__btn--left {
-  left: 6%;
-  transform: translate(-50%, -50%);
-}
-
-.slider__btn--right {
-  right: 6%;
-  transform: translate(50%, -50%);
 } */
 /* /////////////CONTACT/////////// */
 .contact button {
@@ -464,7 +439,7 @@ h2 .page-num {
 }
 .contact h5 {
   text-align: center;
-  font-size: 1vw;
+  font-size: 1.4vw;
 }
 .contact {
   height: fit-content;
@@ -479,7 +454,7 @@ form input,
 textarea {
   border: 0.1vw solid white;
   color: white;
-  font-size: 0.8vw;
+  font-size: 1vw;
   border-radius: 0.3vw;
   box-shadow: var(--dropshadow);
   background-color: transparent;
@@ -509,7 +484,7 @@ form .contact-message {
   background-color: transparent;
   width: 99vw;
   transform: translate(-10vw, 1vh);
-  font-size: 1.5vw;
+  font-size: 1.6vw;
 }
 .icon {
   max-width: 2rem;
@@ -688,12 +663,12 @@ body .scrolldown {
   .other {
     width: 100%;
   }
-  .blog-container {
+  /* .blog-container {
     width: 80vw;
   }
   .blog {
     width: 25vw;
-  }
+  } */
   .contact button {
     font-size: 1.5vw;
     text-align: center;
@@ -776,7 +751,7 @@ body .scrolldown {
   .skills ul {
     margin-bottom: 5vh;
   }
-  .blogs h4 {
+  /* .blogs h4 {
     font-size: 3.2vw;
   }
   body .blog-container .blog h5 {
@@ -787,7 +762,7 @@ body .scrolldown {
   }
   body .blog-container .blog .readmore {
     font-size: 1.8vw;
-  }
+  } */
   body .contact h5 {
     font-size: 2.6vw;
   }
@@ -802,5 +777,17 @@ body .scrolldown {
   .projectBtn i {
     font-size: 3.5vw;
     margin-right: 1vw;
+  }
+  .aboutcontainer {
+    flex-direction: column;
+  }
+  .aboutcontainer p {
+    width: 100%;
+    font-size: 2.6vw;
+    line-height: 3.5vw;
+    text-align: center;
+  }
+  .aboutcontainer img {
+    width: 50vw;
   }
 }
