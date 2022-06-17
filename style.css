@@ -219,7 +219,7 @@ header nav p {
   aspect-ratio: 1 / 1;
   background-color: white;
   position: fixed;
-  bottom: max(2vw, 1rem);
+  bottom: max(2vw, 2rem);
   min-width: 2rem;
   right: max(2vw, 1rem);
   color: var(--blue);
@@ -690,7 +690,7 @@ body .scrolldown {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2vw;
+    gap: 5vw;
     margin-top: 5vh;
   }
   form input,
@@ -791,8 +791,5 @@ body .scrolldown {
   }
   .aboutcontainer img {
     width: 50vw;
-  }
-  .contact .form-group textarea {
-    margin-top: 15vh;
   }
 }
